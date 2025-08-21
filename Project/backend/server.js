@@ -17,7 +17,7 @@ const app = express();
 // Configure CORS to allow requests from any origin
 // This is suitable for development. For production, specify your domain.
 const corsOptions = {
-  origin: '*', // Allow all origins
+  origin: 'https://price-comparison-of-amazon-and-flipkart-frontend-idsp01wmx.vercel.app/', // Allow all origins
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   credentials: true, // Allow cookies and authentication headers
   optionsSuccessStatus: 204
