@@ -37,8 +37,12 @@ const compareProducts = (products) => {
 
   rankedProducts.sort((a, b) => a.combinedScore - b.combinedScore);
 
+  // ✅ Ensure bestOverall has rating >= 3.5
+  const bestOverall =
+    rankedProducts.find((p) => p.rating !== null && p.rating >= 3.5) || null;
+
   return {
-    bestOverall: rankedProducts[0] || null,
+    bestOverall,
     bestByPrice: sortedByPrice[0] || null,
     bestByRating: sortedByRating[0] || null,
     allProducts: products,
